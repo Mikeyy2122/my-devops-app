@@ -17,17 +17,18 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
       - name: Check Python & Pip
         run: |
-              python --version
-              pip --version
-
+          python --version
+          pip --version
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip  # Make sure pip is up-to-date
           pip install -r requirements.txt
+          pip install pytest  # Explicitly ensure pytest is installed
 
       - name: Run tests
         run: |
           pytest
-
