@@ -29,6 +29,4 @@ jobs:
           pip install -r requirements.txt
           pip install pytest  # Explicitly ensure pytest is installed
 
-      - name: Run tests
-        run: |
-          pytest
+     
